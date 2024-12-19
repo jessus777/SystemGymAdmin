@@ -47,13 +47,13 @@ public static class TextExtensions
             _ => str
         };
 
-    public static string EncodeBase64(this string str, Encoding? encoding = null)
+    public static string EncodeBase64(this string str, Encoding encoding = null)
     {
         var enc = encoding ?? DefaultEncoding;
         return Convert.ToBase64String(enc.GetBytes(str));
     }
 
-    public static string DecodeBase64(this string str, Encoding? encoding = null)
+    public static string DecodeBase64(this string str, Encoding encoding = null)
     {
         var enc = encoding ?? DefaultEncoding;
         return enc.GetString(Convert.FromBase64String(str));
