@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Duende.IdentityServer" Version="7.0.8" />
+    <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="7.0.8" />
+    <PackageReference Include="FluentResults" Version="3.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Toolkit\Toolkit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\String.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>String.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\String.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>String.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+</Project>
